@@ -43,7 +43,7 @@ source에 해당하는 값 필요하지 않는 명령어의 경우 source 값을
 destination와 source가 둘다 필요한 경우 연산의 결과는 destination에 저장됩니다.   
 
 ## 레지스터
-레지스터의 경우 VM의 멤버 변수 배열로 선언되어 있습니다. 
+레지스터의 경우 클래스 VM의 멤버 변수 배열로 선언되어 있습니다. 
 ```C++
 #define REGISTER_SIZE 8
 #define EAX				0 
