@@ -20,12 +20,12 @@ Data는 상수, 전역변수 등의 값이 담겨있는 곳입니다. VM이 프�
 문자열 리터럴과 같은 상수 값을 파일에서 읽어 해당 섹션에 위치시킵니다. 
 
 ## 파일 헤더
-'''C++
+```C++
 typedef struct _FILEHEADER {
 	DWORD code_size;
 	DWORD data_size;
 }FILE_HEADER;
-'''
+```
 8바이트로 구성되어 있으며, 각각 코드 섹션의 크기, 데이터 섹션의 크기를 가리킵니다. 
 VM은 프로그램 초기 실행 시 0x8부터 0x8+code_size까지의 값을 실행 코드로 취급하고 EntryPoint에 복사합니다.
 0x9+code_size부터 0x9+code_size+data_size까지는 Data로 취급하고 Data 섹션에 복사합니다. 
