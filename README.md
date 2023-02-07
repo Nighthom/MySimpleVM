@@ -29,3 +29,36 @@ typedef struct _FILEHEADER {
 8바이트로 구성되어 있으며, 각각 코드 섹션의 크기, 데이터 섹션의 크기를 가리킵니다.    
 VM은 프로그램 초기 실행 시 0x8부터 0x8+code_size까지의 값을 실행 코드로 취급하고 EntryPoint에 복사합니다.   
 0x9+code_size부터 0x9+code_size+data_size까지는 Data로 취급하고 Data 섹션에 복사합니다.    
+
+## Opcode
+```C++
+typedef struct _OPCODE {
+	DWORD operation;
+	DWORD dest, source;
+} OPCODE;
+```
+12바이트로 구성되어 있으며 첫 4바이트는 수행할 operation을 가리키고,    
+나머지 8바이트는 각각 연산의 destination, source를 가리킵니다.   
+source에 해당하는 값 필요하지 않는 명령어의 경우 source 값을 무시합니다.   
+destination와 source가 둘다 필요한 경우 연산의 결과는 destination에 저장됩니다.   
+
+## 레지스터
+레지스터의 경우 VM의 멤버 변수 배열로 선언되어 있습니다. 
+```C++
+#define REGISTER_SIZE 8
+#define EAX				0 
+#define EBX				1
+#define ECX				2
+#define EDX				3
+#define EIP				4
+#define ESP				5
+#define ECONDITION			6
+#define EBP				7
+
+class VM {
+public:
+...
+    DWORD m_Registers[REGISTER_SIZE] = 0;
+...
+}
+```
