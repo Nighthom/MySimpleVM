@@ -1,0 +1,9 @@
+﻿  vm.cpp
+C:\Users\Nighthom\SeungJoon\source\repos\C\VirtualMachineProject\VirtualMachineProject\vm.cpp(120,27): warning C4311: '형식 캐스트': 'char *'에서 'DWORD'(으)로 포인터가 잘립니다.
+C:\Users\Nighthom\SeungJoon\source\repos\C\VirtualMachineProject\VirtualMachineProject\vm.cpp(120,27): warning C4302: '형식 캐스트': 'char *'에서 'DWORD'(으)로 잘립니다.
+  코드를 생성하고 있습니다.
+  2 of 42 functions ( 4.8%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  코드를 생성했습니다.
+  VirtualMachineProject.vcxproj -> C:\Users\Nighthom\SeungJoon\source\repos\C\VirtualMachineProject\x64\Release\VirtualMachineProject.exe
