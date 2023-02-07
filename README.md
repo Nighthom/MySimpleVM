@@ -2,7 +2,7 @@
 간단한 bytecode로 돌아가는 VM입니다. 32bit 메모리 주소를 사용하고, heap을 활용해서 
 메모리를 해당 VM에 할당합니다.
 
-# 문법
+# 구조
 ## 섹션의 위치
 EntryPoint의 Imagebase = 0x00400000   
 Stack의  Imagebase     = 0x70001000   
