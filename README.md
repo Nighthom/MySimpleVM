@@ -4,11 +4,11 @@
 
 # 문법
 ## 섹션의 위치
-EntryPoint의 Imagebase = 0x00400000
-Stack의  Imagebase     = 0x70001000
-Stack의  Size          = 0x1000
-Data의 Imagebase       = 0x60000000
-Data의 Size            = 0x10000000
+EntryPoint의 Imagebase = 0x00400000		
+Stack의  Imagebase     = 0x70001000			
+Stack의  Size          = 0x1000		
+Data의 Imagebase       = 0x60000000			
+Data의 Size            = 0x10000000		
 
 EntryPoint는 Code 섹션의 시작 값이자, VM이 바이트코드를 실행할 때 가장 처음 실행할 명령어의 
 위치입니다. VM이 프로그램을 실행하면 EIP값을 해당 값으로 초기화합니다.
